@@ -4,30 +4,39 @@
   padding: 0;
   outline: none;
   font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
 body{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 111vh;
-  overflow: hidden;
+  overflow-x: hidden;
   background: url("/room1.jpg");
-  background-repeat:repeat-x;
+  background-repeat:repeat;
   background-size: cover;
+  object-fit: fill;
+  /* background: linear-gradient(to right, #ff2600, rgb(77, 255, 0) to left, red,yellow); */
+  animation: changeBackground 8s infinite;
 }
+
+
 ::selection{
   color: #fff;
   background: #f2da04;
 }
 .container{
-  width: 330px;
+  width: 380px;
+  max-width: 100%;
   background: #fff;
   text-align: center;
   border-radius: 5px;
   padding: 50px 35px 10px 35px;
 }
+.container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
 .container header{
-  font-size: 35px;
+  font-size: 10px;
   font-weight: 600;
   margin: 0 0 30px 0;
   color: rgb(59, 59, 245);
@@ -134,16 +143,11 @@ form .page .btns button.next{
   font-size: 17px;
   line-height: 25px;
 }
-body {
-  background: linear-gradient(to right, #ff2600, rgb(77, 255, 0) to left, red,yellow);
-  animation: changeBackground 8s infinite;
-}
-
 @keyframes changeBackground {
   
-  0% { background-position: 0% 10%; }
-  50% { background-position: 900% 210%; }
-  100% { background-position: 100% 50%; }
+  0%, 100% { background-position: 0% 10%; }
+  35% { background-position: 900% 80%; }
+  75% { background-position: 100% 50%; }
 }
 
 .progress-bar .step .bullet.active{
@@ -169,7 +173,7 @@ body {
   background:rgb(59, 59, 245);
 }
 .progress-bar .step .bullet.active:after{
-  background: rgb(252, 203, 143);
+  background: rgb(59, 59, 245);
   transform: scaleX(0);
   transform-origin: left;
   animation: animate 0.3s linear forwards;
@@ -199,3 +203,12 @@ body {
   display: block;
   color: #fff;
 }
+
+div .field{
+  margin-top: 0px 0px;
+  margin-bottom: 0px;
+}
+.des{
+  margin-top: -30px;
+}
+

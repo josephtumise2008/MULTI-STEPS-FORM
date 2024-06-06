@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multi Step Form | CodingNepal</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
   <body>
+
+  <div class="container-fluid">
     <div class="container">
-      <header>Signup Form</header>
+      <header style="font-size: 26px;">Signup</header>
+     <div class="form-box">
+      
+     </div> 
       <div class="progress-bar">
         <div class="step">
           <p>Name</p>
@@ -54,8 +60,8 @@
             <div class="field">
               <button class="firstNext next">Next</button>
             </div>
-          </div>
-
+              <p class="des">Already had an account <a href="" style="color: blue;text-decoration: none;">Login</a></p>
+            </div>
           <div class="page">
             <div class="title">Contact Info:</div>
             <div class="field">
@@ -80,7 +86,7 @@
             </div>
             <div class="field">
               <div class="label">Gender</div>
-              <select>
+              <select style="border: 1px solid blue;background-color: #fff;border-radius: 10px;">
                 <option>Male</option>
                 <option>Female</option>
                 <option>Other</option>
@@ -93,14 +99,14 @@
           </div>
 
           <div class="page">
-            <div class="title">Login Details:</div>
+            <div class="title">IDENTITY DETAILS:</div>
             <div class="field">
-              <div class="label">Username</div>
+              <div class="label">Create Password</div>
               <input type="text">
             </div>
             <div class="field">
-              <div class="label">Password</div>
-              <input type="password">
+              <div class="label">Confirm Password</div>
+              <input type="text">
             </div>
             <div class="field btns">
               <button class="prev-3 prev">Previous</button>
@@ -110,7 +116,9 @@
         </form>
       </div>
     </div>
-    <script src="script.js"></script>
+
+  </div>
+        <script src="script.js"></script>
 
   </body>
 </html>
