@@ -9,13 +9,15 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 111vh;
   overflow: hidden;
-  background: url("bg.png"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
+  background: url("/room1.jpg");
+  background-repeat:repeat-x;
+  background-size: cover;
 }
 ::selection{
   color: #fff;
-  background: #d43f8d;
+  background: #f2da04;
 }
 .container{
   width: 330px;
@@ -28,6 +30,7 @@ body{
   font-size: 35px;
   font-weight: 600;
   margin: 0 0 30px 0;
+  color: rgb(59, 59, 245);
 }
 .container .form-outer{
   width: 100%;
@@ -45,6 +48,7 @@ body{
   text-align: left;
   font-size: 25px;
   font-weight: 500;
+  color: rgb(59, 59, 245);
 }
 .form-outer form .page .field{
   width: 330px;
@@ -52,11 +56,13 @@ body{
   margin: 45px 0;
   display: flex;
   position: relative;
+  color: rgb(59, 59, 245);
 }
 form .page .field .label{
   position: absolute;
   top: -30px;
   font-weight: 500;
+  color: rgb(59, 59, 245);
 }
 form .page .field input{
   height: 100%;
@@ -76,7 +82,7 @@ form .page .field button{
   width: 100%;
   height: calc(100% + 5px);
   border: none;
-  background: #d33f8d;
+  background:rgb(59, 59, 245);
   margin-top: -20px;
   border-radius: 5px;
   color: #fff;
@@ -88,7 +94,7 @@ form .page .field button{
   transition: 0.5s ease;
 }
 form .page .field button:hover{
-  background: #000;
+  background:rgb(59, 59, 245);
 }
 form .page .btns button{
   margin-top: -20px!important;
@@ -119,7 +125,7 @@ form .page .btns button.next{
 .progress-bar .step .bullet{
   height: 25px;
   width: 25px;
-  border: 2px solid #000;
+  border: 2px solid rgb(153, 153, 249);
   display: inline-block;
   border-radius: 50%;
   position: relative;
@@ -128,9 +134,21 @@ form .page .btns button.next{
   font-size: 17px;
   line-height: 25px;
 }
+body {
+  background: linear-gradient(to right, #ff2600, rgb(77, 255, 0) to left, red,yellow);
+  animation: changeBackground 8s infinite;
+}
+
+@keyframes changeBackground {
+  
+  0% { background-position: 0% 10%; }
+  50% { background-position: 900% 210%; }
+  100% { background-position: 100% 50%; }
+}
+
 .progress-bar .step .bullet.active{
-  border-color: #d43f8d;
-  background: #d43f8d;
+  border-color: rgb(5, 250, 254);
+  background: rgb(59, 59, 245);
 }
 .progress-bar .step .bullet span{
   position: absolute;
@@ -148,10 +166,10 @@ form .page .btns button.next{
   right: -51px;
   height: 3px;
   width: 44px;
-  background: #262626;
+  background:rgb(59, 59, 245);
 }
 .progress-bar .step .bullet.active:after{
-  background: #d43f8d;
+  background: rgb(252, 203, 143);
   transform: scaleX(0);
   transform-origin: left;
   animation: animate 0.3s linear forwards;
@@ -166,7 +184,7 @@ form .page .btns button.next{
   display: none;
 }
 .progress-bar .step p.active{
-  color: #d43f8d;
+  color: rgb(59, 59, 245);
   transition: 0.2s linear;
 }
 .progress-bar .step .check{

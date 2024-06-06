@@ -70,3 +70,22 @@ prevBtnFourth.addEventListener("click", function(event){
   progressText[current - 2].classList.remove("active");
   current -= 1;
 });
+const carousel = document.querySelector('.carousel');
+const carouselInner = carousel.querySelector('.carousel-inner');
+const carouselItems = carouselInner.querySelectorAll('.carousel-item');
+
+let currentImage = 0;
+let intervalId = null;
+
+function startCarousel() {
+  intervalId = setInterval(() => {
+    currentImage++;
+    updateCarousel();
+  }, 5000); // change the interval time to your liking
+}
+
+function updateCarousel() {
+  carouselItems.forEach((item, index) => {
+    item.style.opacity = index === currentImage % 3 ? 1 : 0;
+  });
+}
